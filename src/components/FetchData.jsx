@@ -157,5 +157,5 @@ export async function fetchXP() {
   });
 
   const data = response.data;
-   return formatBytes(data.data.transaction_aggregate.aggregate.sum.amount, 0);
+   return formatBytes(data.data.transaction_aggregate.aggregate.sum.amount, 2);
 }

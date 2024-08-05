@@ -19,13 +19,7 @@ export function AuditRatio(props) {
               height="20"
               fill="#55bace"
             ></rect>
-            <text
-              x={`${widthDown / 2}%`}
-              y="25"
-              fill="white"
-              textAnchor="middle"
-              dominantBaseline="middle"
-            >
+            <text x={`${widthDown / 2}%`} y="25" fill="white" textAnchor="middle" dominantBaseline="middle">
               Received: {totalDown}
             </text>
 
@@ -36,13 +30,7 @@ export function AuditRatio(props) {
               height="20"
               fill="#6c79b8"
             ></rect>
-            <text
-              x={`${widthUp / 2}%`}
-              y="55"
-              fill="white"
-              textAnchor="middle"
-              dominantBaseline="middle"
-            >
+            <text x={`${widthUp / 2}%`}  y="55" fill="white"  textAnchor="middle" dominantBaseline="middle">
               Done: {totalUp}
             </text>
           </svg>
@@ -68,18 +56,16 @@ export function formatBytes(bytes, precision) {
   let exponent = Math.floor(Math.log(bytes) / Math.log(1000));
   let value = (bytes / Math.pow(1000, exponent)).toFixed(precision);
 
-  return `${parseFloat(value).toFixed(2)} ${units[exponent]}`;
+  return `${value} ${units[exponent]}`;
 }
 
 function getWidth(totalUp, totalDown) {
-  const maxValue = Math.max(totalUp, totalDown); // Get the maximum value
-
-  // Calculate the widths based on the values as a percentage of the SVG width
-  const maxWidthPercentage = 100; // Maximum width as a percentage of the SVG width
-  const widthUp =
-    maxValue === 0 ? 0 : (totalUp / maxValue) * maxWidthPercentage;
-  const widthDown =
-    maxValue === 0 ? 0 : (totalDown / maxValue) * maxWidthPercentage;
-
-  return { widthUp, widthDown };
-}
+    const maxValue = Math.max(totalUp, totalDown); // Get the maximum value
+  
+    // Calculate the widths based on the values as a percentage of the SVG width
+    const maxWidthPercentage = 100; // Maximum width as a percentage of the SVG width
+    const widthUp = maxValue === 0 ? 0 : (totalUp / maxValue) * maxWidthPercentage;
+    const widthDown = maxValue === 0 ? 0 : (totalDown / maxValue) * maxWidthPercentage;
+  
+    return { widthUp, widthDown };
+  }
