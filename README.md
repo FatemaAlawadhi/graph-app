@@ -9,9 +9,13 @@ The goal of this project is to learn GraphQL by creating a personalized profile 
 - section for generating statistic graphs using SVG.
 - Host the profile page using GitHub Pages.
 
+## Example
+
+https://github.com/user-attachments/assets/2fd14e39-c54c-439b-ab9b-035eea350fa8
+
 ## USAGE
 
-[https://](https://fatemaalawadhi.github.io/graph-app/)
+[Qraphql website](https://fatemaalawadhi.github.io/graph-app/)
 
 ## AUTHORS
 - Fatema Alawadhi
